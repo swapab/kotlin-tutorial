@@ -2,8 +2,6 @@
 // complie: kotlinc example.kt -d example.jar
 // run: kotlin -classpath example.jar ExampleKt
 
-package foo
-
 private fun foo() {} // visible inside example.kt
 
 public var bar: Int= 5 // visible everywhere
@@ -29,10 +27,9 @@ class Subclass: Outer() {
         println("[c is visible] c: $c")
         println("[d is visible] d: $d")
 
-        val outer = Outer()
+        val e = Outer.Nested().e
 
-        println("Nested class is visible: $outer")
-        println("Nested().e is visible: $outer.Nested().e()")
+        println("Nested().e is visible: $e")
     }
 }
 
