@@ -1,4 +1,6 @@
 // exmaple.kt
+// complie: kotlinc example.kt -d example.jar
+// run: kotlin -classpath example.jar ExampleKt
 
 package foo
 
@@ -34,6 +36,6 @@ class Subclass: Outer() {
     }
 }
 
-fun main() {
+fun main(args: Array<String>) {
     Subclass().print()
 }
